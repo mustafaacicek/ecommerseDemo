@@ -35,11 +35,7 @@ public class User {
     @OneToMany(mappedBy = "user")
     private List<ProductReview> productReviews;
 
-
     @OneToMany(mappedBy = "user")
-    private List<ReviewReply> reviewReplies;
-
-    @OneToMany(mappedBy = "order")
     private List<ReviewReply> reviewReplies;
     
     @OneToMany(mappedBy = "user")
