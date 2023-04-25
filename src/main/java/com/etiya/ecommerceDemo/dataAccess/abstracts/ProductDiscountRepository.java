@@ -11,6 +11,7 @@ public interface ProductDiscountRepository extends JpaRepository<ProductDiscount
     @Query(value = "select * from public.product_discount")
     List<Product> getProductDiscount();
 
+
     @Query(value = "SELECT * FROM public.product_discount pd where pd.discount_amount = (select MAX(pd2.discount_amount) FROM public.product_discount pd2)")
     List<Product>getMaxProductDiscount();
 }
