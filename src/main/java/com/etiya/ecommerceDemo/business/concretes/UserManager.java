@@ -1,9 +1,9 @@
 package com.etiya.ecommerceDemo.business.concretes;
 
 import com.etiya.ecommerceDemo.business.abstracts.UserService;
-import com.etiya.ecommerceDemo.business.dtos.requests.AddUserRequest;
-import com.etiya.ecommerceDemo.business.dtos.responses.AddUserResponse;
-import com.etiya.ecommerceDemo.business.dtos.responses.ListUserResponse;
+import com.etiya.ecommerceDemo.business.dtos.requests.users.AddUserRequest;
+import com.etiya.ecommerceDemo.business.dtos.responses.users.AddUserResponse;
+import com.etiya.ecommerceDemo.business.dtos.responses.users.ListUserResponse;
 import com.etiya.ecommerceDemo.entities.concretes.User;
 import com.etiya.ecommerceDemo.repositories.abstracts.UserDao;
 import lombok.AllArgsConstructor;

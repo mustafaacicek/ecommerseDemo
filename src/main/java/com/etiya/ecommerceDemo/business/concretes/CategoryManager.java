@@ -1,9 +1,9 @@
 package com.etiya.ecommerceDemo.business.concretes;
 
 import com.etiya.ecommerceDemo.business.abstracts.CategoryService;
-import com.etiya.ecommerceDemo.business.dtos.requests.AddCategoryRequest;
-import com.etiya.ecommerceDemo.business.dtos.responses.AddCategoryResponse;
-import com.etiya.ecommerceDemo.business.dtos.responses.ListCategoryResponse;
+import com.etiya.ecommerceDemo.business.dtos.requests.categories.AddCategoryRequest;
+import com.etiya.ecommerceDemo.business.dtos.responses.categories.AddCategoryResponse;
+import com.etiya.ecommerceDemo.business.dtos.responses.categories.ListCategoryResponse;
 import com.etiya.ecommerceDemo.core.exceptions.BusinessException;
 import com.etiya.ecommerceDemo.core.utils.mapping.ModelMapperService;
 import com.etiya.ecommerceDemo.entities.concretes.Category;

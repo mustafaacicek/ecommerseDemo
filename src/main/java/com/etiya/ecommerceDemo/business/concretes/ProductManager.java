@@ -1,10 +1,10 @@
 package com.etiya.ecommerceDemo.business.concretes;
 
 import com.etiya.ecommerceDemo.business.abstracts.ProductService;
-import com.etiya.ecommerceDemo.business.dtos.requests.AddProductRequest;
-import com.etiya.ecommerceDemo.business.dtos.responses.AddProductResponse;
-import com.etiya.ecommerceDemo.business.dtos.responses.ListProductResponse;
-import com.etiya.ecommerceDemo.business.dtos.responses.ProductDetailResponse;
+import com.etiya.ecommerceDemo.business.dtos.requests.products.AddProductRequest;
+import com.etiya.ecommerceDemo.business.dtos.responses.products.AddProductResponse;
+import com.etiya.ecommerceDemo.business.dtos.responses.products.ListProductResponse;
+import com.etiya.ecommerceDemo.business.dtos.responses.products.ProductDetailResponse;
 import com.etiya.ecommerceDemo.core.utils.mapping.ModelMapperService;
 import com.etiya.ecommerceDemo.entities.concretes.Product;
 import com.etiya.ecommerceDemo.repositories.abstracts.ProductDao;

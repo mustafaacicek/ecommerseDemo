@@ -1,4 +1,4 @@
-package com.etiya.ecommerceDemo.business.dtos.requests;
+package com.etiya.ecommerceDemo.business.dtos.requests.products;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
