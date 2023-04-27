@@ -1,4 +1,4 @@
-package com.etiya.ecommerceDemo.core.mapping;
+package com.etiya.ecommerceDemo.core.utils.mapping;
 
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;

@@ -5,7 +5,7 @@ import com.etiya.ecommerceDemo.business.dtos.requests.AddCategoryRequest;
 import com.etiya.ecommerceDemo.business.dtos.responses.AddCategoryResponse;
 import com.etiya.ecommerceDemo.business.dtos.responses.ListCategoryResponse;
 import com.etiya.ecommerceDemo.core.exceptions.BusinessException;
-import com.etiya.ecommerceDemo.core.mapping.ModelMapperService;
+import com.etiya.ecommerceDemo.core.utils.mapping.ModelMapperService;
 import com.etiya.ecommerceDemo.entities.concretes.Category;
 import com.etiya.ecommerceDemo.repositories.abstracts.CategoryDao;
 import lombok.AllArgsConstructor;
