@@ -1,8 +1,8 @@
 package com.etiya.ecommerceDemo.business.abstracts;
 
-import com.etiya.ecommerceDemo.business.dtos.requests.AddCategoryRequest;
-import com.etiya.ecommerceDemo.business.dtos.responses.AddCategoryResponse;
-import com.etiya.ecommerceDemo.business.dtos.responses.ListCategoryResponse;
+import com.etiya.ecommerceDemo.business.dtos.requests.categories.AddCategoryRequest;
+import com.etiya.ecommerceDemo.business.dtos.responses.categories.AddCategoryResponse;
+import com.etiya.ecommerceDemo.business.dtos.responses.categories.ListCategoryResponse;
 
 import java.util.List;
 

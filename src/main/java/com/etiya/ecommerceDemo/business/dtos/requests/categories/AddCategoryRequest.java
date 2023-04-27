@@ -1,4 +1,4 @@
-package com.etiya.ecommerceDemo.business.dtos.requests;
+package com.etiya.ecommerceDemo.business.dtos.requests.categories;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package com.etiya.ecommerceDemo.business.dtos.responses;
+package com.etiya.ecommerceDemo.business.dtos.responses.products;
 
 import com.etiya.ecommerceDemo.entities.concretes.Category;
 import lombok.AllArgsConstructor;

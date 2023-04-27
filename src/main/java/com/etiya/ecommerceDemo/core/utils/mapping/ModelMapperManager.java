@@ -1,4 +1,4 @@
-package com.etiya.ecommerceDemo.core.mapping;
+package com.etiya.ecommerceDemo.core.utils.mapping;
 
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 @Service
 @Configuration
 @AllArgsConstructor
+
 public class ModelMapperManager implements ModelMapperService {
 
     private ModelMapper modelMapper;
