@@ -1,14 +1,14 @@
 package com.etiya.ecommerceDemo.business.abstracts;
 
-import com.etiya.ecommerceDemo.entities.concretes.Category;
+import com.etiya.ecommerceDemo.business.dtos.requests.AddCategoryRequest;
+import com.etiya.ecommerceDemo.business.dtos.responses.AddCategoryResponse;
+import com.etiya.ecommerceDemo.business.dtos.responses.ListCategoryResponse;
 
 import java.util.List;
 
 public interface CategoryService {
 
-    List<Category> getAll();
+    List<ListCategoryResponse> getAll();
 
-    Category getById(Long id);
-
-    void addCategory(Category category) throws Exception;
+    AddCategoryResponse add(AddCategoryRequest addCategoryRequest) throws Exception;
 }
