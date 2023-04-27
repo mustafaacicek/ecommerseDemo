@@ -1,6 +1,11 @@
 package com.etiya.ecommerceDemo.business.concretes;
 
 import com.etiya.ecommerceDemo.business.abstracts.CategoryService;
+import com.etiya.ecommerceDemo.business.dtos.requests.AddCategoryRequest;
+import com.etiya.ecommerceDemo.business.dtos.responses.AddCategoryResponse;
+import com.etiya.ecommerceDemo.business.dtos.responses.ListCategoryResponse;
+import com.etiya.ecommerceDemo.core.exceptions.BusinessException;
+import com.etiya.ecommerceDemo.core.mapping.ModelMapperService;
 import com.etiya.ecommerceDemo.entities.concretes.Category;
 import com.etiya.ecommerceDemo.repositories.abstracts.CategoryDao;
 import lombok.AllArgsConstructor;
@@ -13,24 +18,23 @@ import java.util.List;
 public class CategoryManager implements CategoryService {
 
     private CategoryDao categoryDao;
+    private ModelMapperService modelMapperService;
 
     @Override
-    public List<Category> getAll() {
-        return categoryDao.findAll();
+    public List<ListCategoryResponse> getAll(){
+        return categoryDao.getAll();
     }
 
     @Override
-    public Category getById(Long id) {
-        return categoryDao.findById(id).orElseThrow();
-    }
-
-    @Override
-    public void addCategory(Category category) throws Exception {
-
-        if (categoryDao.findByName(category.getName()) != null) {
-            throw new Exception("Girdiğiniz kategori zaten mevcut");
+    public AddCategoryResponse add(AddCategoryRequest addCategoryRequest) throws Exception{
+        Category categoryToFind = categoryDao.findByName(addCategoryRequest.getName());
+        if(categoryToFind != null){
+            throw new BusinessException("Kategori zaten mevcut");
         }
-
+        Category category = modelMapperService.getMapper().map(addCategoryRequest, Category.class);
         categoryDao.save(category);
+
+        AddCategoryResponse response = modelMapperService.getMapper().map(category, AddCategoryResponse.class);
+        return response;
     }
 }
