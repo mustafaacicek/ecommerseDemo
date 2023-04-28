@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class AddProductResponse {
-    private int id;
+    private Long id;
     private String name;
     private double unitPrice;
     private Category category;

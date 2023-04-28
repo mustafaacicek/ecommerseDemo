@@ -11,12 +11,10 @@ import java.util.List;
 
 public interface ProductDao extends JpaRepository<Product, Long> {
 
-    @Query("select new com.etiya.ecommerceDemo.business.dtos.responses.products.ListProductResponse(p.id, p.name, c.name) from Product p join p.category c order by p.name")
+    @Query(value = "select new com.etiya.ecommerceDemo.business.dtos.responses.products.ListProductResponse(p.id, p.name, c.name) from Product p join p.category c order by p.name")
     List<ListProductResponse> getAll();
 
-    @Query(value="Select new com.etiya.ecommerceDemo.business.dtos.responses.products" +
-            ".ProductDetailResponse(p.id, p.name,c.id, c.name)" +
-            "from Product p Join p.category c Where p.id=:id ")
+    @Query(value="Select new com.etiya.ecommerceDemo.business.dtos.responses.products.ProductDetailResponse(p.id, p.name,c.id, c.name) from Product p Join p.category c Where p.id=:id ")
     ProductDetailResponse getById(int id);
 }
 
