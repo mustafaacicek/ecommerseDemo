@@ -4,6 +4,7 @@ import com.etiya.ecommerceDemo.business.abstracts.CategoryService;
 import com.etiya.ecommerceDemo.business.dtos.requests.categories.AddCategoryRequest;
 import com.etiya.ecommerceDemo.business.dtos.responses.categories.AddCategoryResponse;
 import com.etiya.ecommerceDemo.business.dtos.responses.categories.ListCategoryResponse;
+import com.etiya.ecommerceDemo.entities.concretes.Category;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,7 +17,7 @@ public class CategoriesController {
 
     private CategoryService categoryService;
 
-    @GetMapping
+    @GetMapping("")
     public List<ListCategoryResponse> getAll() {
         return categoryService.getAll();
     }

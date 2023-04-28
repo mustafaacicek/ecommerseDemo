@@ -7,12 +7,10 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
-public interface CategoryDao extends JpaRepository<Category, Integer> {
+public interface CategoryDao extends JpaRepository<Category, Long> {
     Category findByName(String name);
 
-    @Query(value = "select new" +
-            "com.etiya.ecommerceDemo.businnes.dtos.responses.ListCategoryResponse(c.id, c.name)" +
-            "from Category c", nativeQuery = false)
+    @Query(value = "select new com.etiya.ecommerceDemo.business.dtos.responses.categories.ListCategoryResponse(c.id, c.name) from Category c")
     List<ListCategoryResponse> getAll();
 
 }

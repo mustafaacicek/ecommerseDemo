@@ -6,7 +6,8 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class ListProductResponse {
-    private int id;
+    // id must be Long
+    private Long id;
     private String name;
     private String categoryName;
 }
